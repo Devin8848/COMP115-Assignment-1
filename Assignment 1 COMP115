@@ -1,0 +1,34 @@
+float x;
+float y;
+float z;
+float w;
+
+void setup(){
+  size(600,400);
+  x = width/2.0;
+  y = height/2.0;
+  z = 0.4*height/9.0;
+  w = 0.4*width/9.0;
+}
+
+void draw(){
+  background(255);
+  noStroke();
+  fill(#C8F5F2);
+  rect(0,0,4*width/9, 4*height/9);
+  rect(5*width/9, 0, 4*width/9,4*height/9);
+  rect(0,5*height/9,4*width/9, 4*height/9);
+  rect(5*width/9, 5*height/9, 4*width/9,4*height/9);
+  fill(255,0,0,100);
+  ellipse(x, w, 0.8*width/9, 0.8*width/9);
+  fill(0,255,0,100);
+  ellipse (z ,y,0.8*height/9, 0.8*height/9);
+  if (mousePressed){
+    z = 0.4*height/9.0;
+    w = 0.4*width/9.0;
+}
+  if (z <=width-height/20.0){
+    z = z+ (0.5*(width/90.0));
+  if (w <=height-width/20.0){
+    w = w+ (0.5 *(height/90.0));
+  }}}
